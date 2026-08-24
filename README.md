@@ -3,7 +3,7 @@
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/AlexNDRmac/opcache-exporter)
 [![CI](https://github.com/AlexNDRmac/opcache-exporter/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexNDRmac/opcache-exporter/actions/workflows/ci.yml)
 
-This is a simple server that scrapes OPcache status and exports it via HTTP for Prometheus consumption.
+This is a simple server that scrapes OPCache status and exports it via HTTP for Prometheus consumption.
 
 ## Development
 

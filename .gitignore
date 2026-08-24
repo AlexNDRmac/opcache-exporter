@@ -1,1 +1,2 @@
-/opcache_exporter
+# build artifacts
+bin/*

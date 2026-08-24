@@ -27,14 +27,14 @@ RUN --mount=type=cache,target=/go/pkg/mod \
     CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
     go build \
     -trimpath \
-    -o /opcache_exporter ./cmd/exporter
+    -o ./bin/opcache_exporter ./cmd/exporter
 
 # --- Final stage ---
 FROM gcr.io/distroless/static-debian13:nonroot
 
 ARG VERSION
 ARG fcgi_uri
-ENV VERSION=${VERSION:-0.1.0}
+ENV VERSION=${VERSION:-1.0.0}
 ENV FCGI_URI=${fcgi_uri:-}
 
 LABEL org.opencontainers.image.source="https://github.com/AlexNDRmac/opcache-exporter" \
@@ -45,7 +45,7 @@ LABEL org.opencontainers.image.source="https://github.com/AlexNDRmac/opcache-exp
       org.opencontainers.image.version="${VERSION}"
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=builder /opcache_exporter /usr/bin/opcache_exporter
+COPY --from=builder ./bin/opcache_exporter /usr/bin/opcache_exporter
 
 EXPOSE 9101
 
