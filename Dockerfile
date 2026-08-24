@@ -45,7 +45,7 @@ LABEL org.opencontainers.image.source="https://github.com/AlexNDRmac/opcache-exp
       org.opencontainers.image.version="${VERSION}"
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=builder ./bin/opcache_exporter /usr/bin/opcache_exporter
+COPY --from=builder /app/bin/opcache_exporter /usr/bin/opcache_exporter
 
 EXPOSE 9101
 

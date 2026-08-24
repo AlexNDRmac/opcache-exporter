@@ -32,4 +32,4 @@ jobs:
       - name: Build
         run: make build
       - name: Run Exporter
-        run: ./opcache_exporter -h
+        run: ./bin/opcache_exporter -h
