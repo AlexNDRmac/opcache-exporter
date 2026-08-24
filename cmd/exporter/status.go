@@ -21,10 +21,10 @@ type MemoryUsage struct {
 
 // InternedStringsUsage contains information about OPcache interned strings usage
 type InternedStringsUsage struct {
-	BufferSize     int64 `json:"buffer_size"`
-	UsedMemory     int64 `json:"used_memory"`
-	FreeMemory     int64 `json:"free_memory"`
-	NumerOfStrings int64 `json:"number_of_strings"`
+	BufferSize      int64 `json:"buffer_size"`
+	UsedMemory      int64 `json:"used_memory"`
+	FreeMemory      int64 `json:"free_memory"`
+	NumberOfStrings int64 `json:"number_of_strings"`
 }
 
 // OPcacheStatistics contains information about OPcache statistics

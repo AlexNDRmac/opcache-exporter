@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"strings"
 	"sync"
+
 	"github.com/prometheus/client_golang/prometheus"
 
 	fcgiclient "github.com/tomasen/fcgi_client"
@@ -27,10 +28,10 @@ var (
 	memoryUsageWastedMemoryDesc            = newMetric("memory_usage_wasted_memory", "OPcache wasted memory.")
 	memoryUsageCurrentWastedPercentageDesc = newMetric("memory_usage_current_wasted_percentage", "OPcache current wasted percentage.")
 
-	internedStringsUsageBufferSizeDesc     = newMetric("interned_strings_usage_buffer_size", "OPcache interned string buffer size.")
-	internedStringsUsageUsedMemoryDesc     = newMetric("interned_strings_usage_used_memory", "OPcache interned string used memory.")
-	internedStringsUsageUsedFreeMemory     = newMetric("interned_strings_usage_free_memory", "OPcache interned string free memory.")
-	internedStringsUsageUsedNumerOfStrings = newMetric("interned_strings_usage_number_of_strings", "OPcache interned string number of strings.")
+	internedStringsUsageBufferSizeDesc      = newMetric("interned_strings_usage_buffer_size", "OPcache interned string buffer size.")
+	internedStringsUsageUsedMemoryDesc      = newMetric("interned_strings_usage_used_memory", "OPcache interned string used memory.")
+	internedStringsUsageUsedFreeMemory      = newMetric("interned_strings_usage_free_memory", "OPcache interned string free memory.")
+	internedStringsUsageUsedNumberOfStrings = newMetric("interned_strings_usage_number_of_strings", "OPcache interned string number of strings.")
 
 	statisticsNumCachedScripts   = newMetric("statistics_num_cached_scripts", "OPcache statistics, number of cached scripts.")
 	statisticsNumCachedKeys      = newMetric("statistics_num_cached_keys", "OPcache statistics, number of cached keys.")
@@ -98,7 +99,7 @@ func (e *Exporter) Describe(ch chan<- *prometheus.Desc) {
 	ch <- internedStringsUsageBufferSizeDesc
 	ch <- internedStringsUsageUsedMemoryDesc
 	ch <- internedStringsUsageUsedFreeMemory
-	ch <- internedStringsUsageUsedNumerOfStrings
+	ch <- internedStringsUsageUsedNumberOfStrings
 	ch <- statisticsNumCachedScripts
 	ch <- statisticsNumCachedKeys
 	ch <- statisticsMaxCachedKeys
