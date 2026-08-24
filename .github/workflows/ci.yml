@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - '.gitattributes'
+      - '.editorconfig'
+      - 'default.mk'
+      - 'Makefile'
   pull_request:
     branches:
       - master
