@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"errors"
-	"io/ioutil"
+	"io"
 	"net/url"
 	"strings"
 	"sync"
@@ -172,7 +172,7 @@ func (e *Exporter) getOpcacheStatus() (*OPcacheStatus, error) {
 		return nil, err
 	}
 
-	content, err := ioutil.ReadAll(resp.Body)
+	content, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}

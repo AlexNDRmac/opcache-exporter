@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
@@ -39,12 +38,12 @@ func main() {
 
 func run(listenAddress, metricsPath, fcgiURI, scriptPath, scriptDir string) error {
 	if len(scriptPath) == 0 {
-		file, err := ioutil.TempFile(scriptDir, "opcache.*.php")
+		file, err := os.CreateTemp(scriptDir, "opcache.*.php")
 		if err != nil {
 			return err
 		}
 
-		file.Chmod(0777)
+		file.Chmod(0644) // world-readable so that the FastCGI server can read it
 
 		payload := "<?php\necho(json_encode(opcache_get_status()));\n"
 		_, err = file.WriteString(payload)
