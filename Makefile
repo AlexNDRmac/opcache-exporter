@@ -1,4 +1,5 @@
-.PHONY: build
+include default.mk
 
-build:
+.PHONY: build
+build: ## Build the opcache_exporter binary
 	go build -o opcache_exporter ./cmd/exporter
