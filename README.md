@@ -24,13 +24,13 @@ Flags:
                                 Address to listen on for web interface and telemetry.
       --web.telemetry-path="/metrics"
                                 Path under which to expose metrics.
-      --opcache.fcgi-uri="tcp://127.0.0.1:9000"
+      --opcache.fcgi-uri="tcp://127.0.0.1:9101"
                                 Connection string to FastCGI server.
       --opcache.script-path=""  Path to PHP script which echoes json-encoded OPcache status
       --opcache.script-dir=""   Path to directory where temporary PHP file will be created
 ```
 
-Set --opcache.fcgi-uri to a uri such as tcp://127.0.0.1:9000 if php-fpm is listening on a tcp socket or unix:///path/to/php.sock for a unix socket.
+Set --opcache.fcgi-uri to a uri such as tcp://127.0.0.1:9101 if php-fpm is listening on a tcp socket or unix:///path/to/php.sock for a unix socket.
 
 ## License
 
