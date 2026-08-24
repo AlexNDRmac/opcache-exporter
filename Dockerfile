@@ -6,7 +6,6 @@
 # Run the builder on the host architecture; Go cross-compiles natively
 # via GOOS/GOARCH, so there is no need for QEMU emulation.
 FROM --platform=$BUILDPLATFORM golang:1.27-bookworm AS builder
-# FROM golang:1.19-alpine AS build
 
 ARG TARGETOS=linux
 ARG TARGETARCH
