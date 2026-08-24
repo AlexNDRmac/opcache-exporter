@@ -6,7 +6,7 @@ on:
       - master
     paths-ignore:
       - '**.md'
-      - '.gitignore'
+      - '.*ignore'
       - '.gitattributes'
       - '.editorconfig'
       - 'default.mk'

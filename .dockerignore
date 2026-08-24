@@ -1,0 +1,20 @@
+# Build artifacts
+./bin/
+
+# Documentation
+README.md
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Editor
+.editorconfig
+
+# CI/CD
+.github/
+
+# Makefiles
+default.mk
+Makefile
