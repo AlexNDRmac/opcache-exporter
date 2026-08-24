@@ -1,4 +1,4 @@
-# OPcache Exporter for Prometheus
+# Prometheus exporter for PHP OPCache
 
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/AlexNDRmac/opcache-exporter)
 [![CI](https://github.com/AlexNDRmac/opcache-exporter/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexNDRmac/opcache-exporter/actions/workflows/ci.yml)

@@ -37,9 +37,9 @@ ENV VERSION=${VERSION:-1.0.0}
 ENV FCGI_URI=${fcgi_uri:-}
 
 LABEL org.opencontainers.image.source="https://github.com/AlexNDRmac/opcache-exporter" \
-      org.opencontainers.image.description="Prometheus exporter for PHP's OPCache" \
+      org.opencontainers.image.description="Prometheus exporter for PHP OPCache" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.title="opcache_exporter" \
+      org.opencontainers.image.title="opcache-exporter" \
       org.opencontainers.image.url="https://github.com/AlexNDRmac/opcache-exporter" \
       org.opencontainers.image.version="${VERSION}"
 
