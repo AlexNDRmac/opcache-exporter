@@ -11,6 +11,7 @@ on:
       - '.editorconfig'
       - 'default.mk'
       - 'Makefile'
+      - '.github/workflows/release.yml'
   pull_request:
     branches:
       - master
